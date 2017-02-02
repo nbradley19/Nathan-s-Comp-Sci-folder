@@ -1,0 +1,51 @@
+
+/**
+ * @author Nathan Bradley
+ * Date:10/20/16
+ * Assignment:GuessinGameTwo
+ */
+import java.util.Scanner;
+public class GuessingGameTwo{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n,p;
+        int counter = 0;
+        n = (int)(100 * Math.random() + 1);
+        System.out.println("Enter a number between 1 and 100: ");
+        do{
+            p = sc.nextInt();
+            if(n == p)
+                   System.out.println("Correct");
+                   else if(n < p)
+                   System.out.println("Too high. Try again.");
+                   else
+                   System.out.println("Too low. Try again.");
+                   counter++;
+        }while(n != p);  
+        System.out.println("Number of attempts " + counter); 
+    }
+}
+/*
+17
+Too low. Try again.
+95
+Too high. Try again.
+50
+Too low. Try again.
+60
+Too high. Try again.
+55
+Too low. Try again.
+57
+Too low. Try again.
+59
+Correct
+Enter a number between 1 and 100: 
+40
+Too low. Try again.
+45
+Too high. Try again.
+42
+Correct
+
+*/

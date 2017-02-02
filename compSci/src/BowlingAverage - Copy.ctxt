@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment1.params=a\ b\ c
+comment1.target=double\ calcAverage(int,\ int,\ int)
+comment1.text=\r\n\ Method\ which\ finds\ the\ average\ of\ three\ games\ of\ bowling\r\n\ \r\n\ @param\ \ a,\ b,\ and\ c\ represent\ each\ game\ bowled\r\n\ @return\ \ \ the\ average\ of\ the\ three\ games\ \r\n
+numComments=2
