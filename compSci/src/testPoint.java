@@ -13,7 +13,7 @@ public class testPoint{
        System.out.println(p2);
        System.out.println(p3);
        double x = Math.sqrt(p2.getX() * p2.getX() + p2.getY() * p2.getY());
-       System.out.println(x);
-        
+       //System.out.println(Math.round(x));
+        System.out.println(x);
     }
 }
