@@ -49,43 +49,72 @@ public class Point {
 		return (p.x == x && p.y == y);
 
 	}
-	public void location(){
-		if(x > 0.0 && y > 0.0){
+
+	public void location() {
+		if (x > 0.0 && y > 0.0) {
 			System.out.println("Quadrant I");
-		}
-		else if(x < 0.0 && y > 0.0){
+		} else if (x < 0.0 && y > 0.0) {
 			System.out.println("Quadrant II");
-		}
-		else if(x < 0.0 && y < 0.0){
+		} else if (x < 0.0 && y < 0.0) {
 			System.out.println("Quadrant III");
-		}
-		else if(x > 0.0 && y < 0.0){
+		} else if (x > 0.0 && y < 0.0) {
 			System.out.println("Quadrant IV");
-		}
-		else if (x == 0.0 && y != 0){
+		} else if (x == 0.0 && y != 0) {
 			System.out.println("x-axis");
-		}
-		else if (y == 0.0 && x != 0){
+		} else if (y == 0.0 && x != 0) {
 			System.out.println("y-axis");
-		}
-		else if (y == 0.0 && x == 0.0){
+		} else if (y == 0.0 && x == 0.0) {
 			System.out.println("Origin");
 		}
 	}
-	public double slope(Point p){
+
+	public double slope(Point p) {
 		return (y - p.y) / (x - p.x);
 	}
-	public Point midpoint(Point p){
+
+	public Point midpoint(Point p) {
 		return new Point((x + p.x) / 2, (y + p.y) / 2);
-		
+
 	}
-	public double distance(Point p){
+
+	public double distance(Point p) {
 		return Math.sqrt(((x - p.x) * (x - p.x)) + ((y - p.y) * (y - p.y)));
 	}
-	//dilates point from origin with given scale factor
-	public void dilate(double k){
+
+	// dilates point from origin with given scale factor
+	public void dilate(double k) {
 		x = k * x;
 		y = k * y;
 	}
 
+	public void translate(double dX, double dY) {
+		x += dX;
+		y += dY;
+	}
+
+	public void rotate90() {
+		double q = y;
+		y = x;
+		x = -q;
+	}
+
+	public void rotate180() {
+		x = -x;
+		y = -y;
+	}
+
+	public void rotate270() {
+		double z = x;
+		x = y;
+		y = -z;
+	}
+
+	public void reflect(char axis) {
+
+		if ((char) axis == 'x') {
+			y = -y;
+		} else {
+			x = -x;
+		}
+	}
 }
