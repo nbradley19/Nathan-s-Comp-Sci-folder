@@ -28,15 +28,15 @@ public class testPoint {
 		System.out.println(p3.slope(p6));
 		System.out.println();
 
-		// System.out.println("Dilation of (5,8) with a scale factor of .5");
+		System.out.println("Dilation of (5,8) with a scale factor of .5");
 		// System.out.println("Translation of  of (5,8) right 2, down 5");
 		// System.out.println("Rotation of (5,8) 90 degrees");
 		// System.out.println("Rotation of (5,8) 180 degrees");
 		// System.out.println("Rotation of (5,8) 270 degrees");
 		// System.out.println("Translation of of (5,8) right 2, down 5");
 		// System.out.println("Reflection of (5,8) over the x-axis");
-		System.out.println("Reflection of (5,8) over the y-axis");
-		// p2.dilate(.5);
+		//System.out.println("Reflection of (5,8) over the y-axis");
+		p2.dilate(.5);
 		// p2.translate(2, -5);
 		// p2.rotate90();
 		// p2.rotate180();
