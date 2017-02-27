@@ -1,8 +1,6 @@
 
 //Triangle class will create triangles which we can do various calculations, classifications, and transformations on.
 
-import java.awt.Point;
-
 public class Triangle {
 	private Point pA;
 	private Point pB;
@@ -82,21 +80,44 @@ public class Triangle {
 			pB = p;
 		else
 			pC = p;
-			
+
 	}
 
 	public void dilate(double sf) {
+
 		pA.dilate(sf);
 		pB.dilate(sf);
 		pC.dilate(sf);
-		
+
 	}
 
 	public void rotate(int degrees) {
-
+		if (degrees == 90) {
+			pA.rotate90();
+			pB.rotate90();
+			pC.rotate90();
+		} else if (degrees == 180) {
+			pA.rotate180();
+			pB.rotate180();
+			pC.rotate180();
+		} else {
+			pA.rotate270();
+			pB.rotate270();
+			pC.rotate270();
+		}
 	}
 
 	public void reflect(char axis) {
+		axis = 'x';
 
+		if (axis == 'x') {
+			pA.reflect('x');
+			pB.reflect('x');
+			pC.reflect('x');
+		} else {
+			pA.reflect('y');
+			pB.reflect('y');
+			pC.reflect('y');
+		}
 	}
 }
