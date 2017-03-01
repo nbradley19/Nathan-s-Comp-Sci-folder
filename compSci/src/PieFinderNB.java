@@ -25,7 +25,15 @@ public class PieFinderNB {
 		bestDenom = 7;
 		minError = Math.abs((double) bestNumer / bestDenom - target);
 
-		// rest of e program goes here
-
+		for (denom = 8; denom <= 999; denom++) {
+			for (numer = 2 * denom; numer < 3 * denom; numer++) {
+				if (Math.abs((double)numer / denom - target) < minError) {
+					bestNumer = numer;
+					bestDenom = denom;
+					minError = Math.abs((double) bestNumer / bestDenom - target);
+				}
+			}
+		}
+		System.out.println(bestNumer + " / " + bestDenom);
 	}
 }
