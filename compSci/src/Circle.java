@@ -15,7 +15,7 @@ public class Circle {
 	}
 
 	public String toString() {
-		return "";
+		return "The radius of the Circle is " + radius + " and the circumference is " + circumference();
 	}
 
 	public Point getCenter() {
@@ -34,12 +34,12 @@ public class Circle {
 		radius = r;
 	}
 
-	public double area(double r) {
-		return Math.pow((Math.PI * r), 2);
+	public double area() {
+		return Math.PI * Math.pow(radius, 2);
 	}
 
-	public double circumference(double r) {
-		return (2 * Math.PI * r);
+	public double circumference() {
+		return (2 * Math.PI * radius);
 	}
 
 }
