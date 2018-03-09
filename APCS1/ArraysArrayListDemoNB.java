@@ -15,6 +15,11 @@ public class ArraysArrayListDemoNB {
 		while(numList.size() < 20) {
 			numList.add((int)(99 * Math.random() + 1));
 		}
+		System.out.println("ArrayList: " + numList);
+		int oddCounter = 0;
+		for(int n: nums) {
+			
+		}
 	}
 
 }
